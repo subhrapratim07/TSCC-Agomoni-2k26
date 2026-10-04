@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0907">
+  <title>Agomoni 2026 — The Goddess Is Coming</title>
+  <meta name="description" content="Agomoni 2026 — a Bengali Devi Paksha inspired music landing page.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#090705; --ink:#f8efe4; --muted:#b9aaa0; --line:rgba(255,235,214,.13);
+      --accent:#e9a34a; --accent2:#f4c37b; --card:rgba(22,17,14,.78);
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#090705 url("agomoni-background.png") center top/cover fixed no-repeat;color:var(--ink);font-family:"Noto Sans Bengali",system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(5,3,2,.16),rgba(5,3,2,.64) 68%,rgba(5,3,2,.86));}
+    body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.08;background-image:radial-gradient(#fff 0.7px,transparent .7px);background-size:22px 22px;mask-image:linear-gradient(to bottom,black,transparent 75%)}
+    .wrap{width:min(var(--max),calc(100% - 34px));margin:auto}
+    .pill{border:1px solid var(--line);background:rgba(255,255,255,.035);color:var(--ink);border-radius:999px;padding:8px 12px;font-size:12px}
+    main{padding:34px 0 70px}
+
+    /* HERO */
+    .hero{min-height:420px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:linear-gradient(180deg,rgba(20,11,7,.34),rgba(8,5,4,.40));box-shadow:0 30px 80px rgba(0,0,0,.35)}
+    .hero:before{content:"";position:absolute;inset:auto 8% -42%;height:90%;background:radial-gradient(circle,rgba(229,156,72,.20),transparent 63%);filter:blur(18px)}
+    .sun{position:absolute;width:310px;height:310px;border-radius:50%;background:radial-gradient(circle,rgba(245,190,110,.18),rgba(201,119,40,.05) 48%,transparent 70%);top:25px}
+    .hero-content{position:relative;z-index:1;padding:60px 20px}
+    .organizer{display:flex;flex-direction:column;align-items:center;gap:6px;margin-bottom:12px}
+
+    /* HD LOGO */
+    .organizer-logo{
+      width:128px;height:128px;
+      object-fit:cover;
+      border-radius:50%;
+      background:#fff;
+      box-shadow:0 10px 28px rgba(0,0,0,.28);
+      margin-bottom:4px;
+    }
+    .organizer-name{font-size:clamp(19px,3vw,28px);font-weight:700;letter-spacing:.01em;color:#fff}
+    .eyebrow{font-size:13px;color:var(--accent2);letter-spacing:.18em;text-transform:uppercase}
+
+    /* BENGALI TITLE IMAGE (text.png) */
+    .bn-title{margin:10px 0 0;line-height:0;display:flex;justify-content:center}
+    .bn-logo{
+      display:block;
+      width:clamp(230px,36vw,360px);
+      height:auto;
+      /* transparent, edge-free PNG (made by clean_text.py) with a soft warm glow */
+      filter:
+        drop-shadow(0 2px 3px rgba(0,0,0,.55))
+        drop-shadow(0 0 18px rgba(255,140,50,.38));
+      animation:bnGlow 4.5s ease-in-out infinite;
+    }
+    @keyframes bnGlow{
+      0%,100%{filter:drop-shadow(0 2px 3px rgba(0,0,0,.55)) drop-shadow(0 0 14px rgba(255,140,50,.30))}
+      50%{filter:drop-shadow(0 2px 3px rgba(0,0,0,.55)) drop-shadow(0 0 26px rgba(255,160,60,.55))}
+    }
+    @media(prefers-reduced-motion:reduce){.bn-logo{animation:none}}
+
+    h1{font-family:"Playfair Display","Noto Sans Bengali",serif;font-size:clamp(54px,10vw,112px);line-height:.95;margin:18px 0 10px;font-weight:600;letter-spacing:-.04em}
+    .tagline{margin:12px 0 0;color:var(--muted);font-size:14px}
+    .countdown{display:flex;justify-content:center;gap:9px;margin:28px 0 0;flex-wrap:wrap}
+    .time{min-width:70px;padding:11px 10px;border:1px solid var(--line);border-radius:14px;background:rgba(0,0,0,.22)}
+    .time b{display:block;font-size:22px}.time small{color:var(--muted);font-size:10px}
+
+    /* SECTIONS */
+    section{margin-top:24px}
+    .section-card{border:1px solid var(--line);border-radius:22px;background:var(--card);overflow:hidden}
+    .section-head{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:19px 20px;border-bottom:1px solid var(--line)}
+    .section-head h2{margin:0;font-size:17px}
+    .section-head p{margin:0;color:var(--muted);font-size:12px}
+    .spotify-grid{padding:16px}
+    .player{min-height:352px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0b0907}
+    .player iframe{width:100%;height:352px;border:0;display:block}
+    .now{margin:0 16px 16px;padding:13px 15px;border-radius:14px;background:rgba(233,163,74,.09);border:1px solid rgba(233,163,74,.18);display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .now small{color:var(--muted)}.now strong{font-size:13px}
+    footer{padding:35px 0;color:#756a63;text-align:center;font-size:11px}
+
+    /* GLIMPSES */
+    .glimpses-section{margin-top:28px}
+    .glimpses-intro{padding:18px 20px 0;color:var(--muted);font-size:12px;line-height:1.65}
+    .glimpses-wrap{padding:18px 0 20px;overflow:hidden;position:relative}
+    .glimpses-wrap:before,.glimpses-wrap:after{content:"";position:absolute;top:0;bottom:0;width:9%;z-index:2;pointer-events:none}
+    .glimpses-wrap:before{left:0;background:linear-gradient(90deg,rgba(22,17,14,.95),transparent)}
+    .glimpses-wrap:after{right:0;background:linear-gradient(270deg,rgba(22,17,14,.95),transparent)}
+    .marquee{display:flex;width:max-content;margin:0 0 14px;animation:glide 42s linear infinite;will-change:transform}
+    .marquee.reverse{animation-name:glideReverse;animation-duration:48s}
+    .marquee.slow{animation-duration:58s}
+    .marquee:hover{animation-play-state:paused}
+    .memory{width:300px;height:205px;flex:0 0 auto;margin-right:14px;border:1px solid rgba(255,220,180,.17);border-radius:18px;overflow:hidden;background:#0b0907;box-shadow:0 14px 36px rgba(0,0,0,.24);cursor:pointer;position:relative}
+    .memory img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .5s ease,filter .5s ease}
+    .memory:hover img{transform:scale(1.035);filter:saturate(1.08)}
+    .memory:after{content:"Agomoni 2025";position:absolute;left:10px;bottom:10px;padding:5px 8px;border-radius:999px;background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.14);font-size:10px;color:#fff;backdrop-filter:blur(5px)}
+    .glimpse-note{text-align:center;color:#85776e;font-size:11px;padding:0 16px 3px}
+    .drive-link{display:inline-flex;align-items:center;gap:7px;margin:0 20px 18px;padding:9px 12px;border:1px solid var(--line);border-radius:12px;color:var(--ink);text-decoration:none;background:rgba(255,255,255,.035);font-size:12px}
+    .drive-link:hover{border-color:rgba(255,195,123,.45)}
+    .lightbox{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(0,0,0,.84);backdrop-filter:blur(10px)}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:min(94vw,1100px);max-height:88vh;object-fit:contain;border-radius:16px;box-shadow:0 24px 80px rgba(0,0,0,.55)}
+    .lightbox button{position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(0,0,0,.45);color:#fff;font-size:24px;cursor:pointer}
+    @keyframes glide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @keyframes glideReverse{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+    @media(max-width:700px){.memory{width:235px;height:165px;margin-right:10px}.marquee{margin-bottom:10px}.glimpses-intro{padding-left:15px;padding-right:15px}}
+    @media(prefers-reduced-motion:reduce){.marquee{animation:none}.memory img{transition:none}}
+
+    .diya{position:absolute;bottom:25px;width:11px;height:7px;border-radius:50% 50% 55% 55%;background:#9a5a25;box-shadow:0 0 18px #e8a14c}
+    .diya:after{content:"";position:absolute;left:3px;top:-12px;width:5px;height:12px;border-radius:50%;background:#ffd18a;box-shadow:0 0 13px 4px rgba(255,184,88,.55)}
+    .d1{left:18%}.d2{right:18%}
+    @media(max-width:800px){.hero{min-height:390px}.section-head{align-items:flex-start;flex-direction:column}}
+    @media(max-width:520px){.wrap{width:min(var(--max),calc(100% - 20px))}.hero{border-radius:20px}.hero-content{padding:45px 12px}.countdown{gap:6px}.time{min-width:62px}.spotify-grid{padding:10px}.player iframe{height:330px}.organizer-logo{width:112px;height:112px}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <section class="hero">
+    <div class="sun"></div><div class="diya d1"></div><div class="diya d2"></div>
+    <div class="hero-content">
+      <div class="organizer" aria-label="TSCC Presents">
+        <img class="organizer-logo" src="tech-students-logo.png" alt="TSCC logo">
+        <div class="organizer-name">TSCC Presents</div>
+      </div>
+      <div class="eyebrow">devi paksha • 2026</div>
+      <div class="bn-title">
+        <img class="bn-logo" src="text-clean.png" alt="আগমনী">
+      </div>
+      <h1>Agomoni 2026</h1>
+      <p class="tagline">The Goddess Is Coming · sacred, nostalgic, early-morning radio</p>
+      <div class="countdown" aria-label="Countdown to Mahalaya">
+        <div class="time"><b id="dd">00</b><small>days</small></div>
+        <div class="time"><b id="hh">00</b><small>hours</small></div>
+        <div class="time"><b id="mm">00</b><small>minutes</small></div>
+        <div class="time"><b id="ss">00</b><small>seconds</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <div class="section-head">
+      <div><h2>Spotify</h2><p>Durga Puja Songs · curated for Agomoni 2026.</p></div>
+      <span class="pill">SPOTIFY</span>
+    </div>
+    <div class="spotify-grid">
+      <div class="player" id="player">
+        <iframe src="https://open.spotify.com/embed/playlist/1zVKSwcN1UDYBXsBWQlp16?utm_source=generator&theme=0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy" title="Agomoni 2026 Spotify playlist"></iframe>
+      </div>
+    </div>
+    <div class="now"><div><small>Now playing</small><br><strong id="nowPlaying">Tap a track to begin</strong></div><div>🪘</div></div>
+  </section>
+
+  <section class="section-card glimpses-section" id="glimpses-2025">
+    <div class="section-head">
+      <div><h2>Glimpses of Agomoni 2025</h2><p>A little look back at the celebration.</p></div>
+      <span class="pill">2025</span>
+    </div>
+    <div class="glimpses-intro">Moments from the stage, performances, music, dance and the people who made Agomoni special. The gallery flows continuously while you browse.</div>
+    <div class="glimpses-wrap" aria-label="Agomoni 2025 photo gallery">
+      <div class="marquee">
+        <div class="memory"><img src="agomoni-2025/01.jpg" alt="Agomoni 2025 celebration" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/02.jpg" alt="Agomoni 2025 live music performance" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/03.jpg" alt="Agomoni 2025 musicians performing" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/04.jpg" alt="Agomoni 2025 stage performance" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/05.jpg" alt="Agomoni 2025 dance performance" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/01.jpg" alt="Agomoni 2025 celebration" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/02.jpg" alt="Agomoni 2025 live music performance" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/03.jpg" alt="Agomoni 2025 musicians performing" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/04.jpg" alt="Agomoni 2025 stage performance" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/05.jpg" alt="Agomoni 2025 dance performance" loading="lazy"></div>
+      </div>
+      <div class="marquee reverse">
+        <div class="memory"><img src="agomoni-2025/06.jpg" alt="Agomoni 2025 cultural performance" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/07.jpg" alt="Agomoni 2025 performer" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/08.jpg" alt="Agomoni 2025 performer in traditional attire" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/09.jpg" alt="Agomoni 2025 dance moment" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/10.jpg" alt="Agomoni 2025 group photo" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/06.jpg" alt="Agomoni 2025 cultural performance" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/07.jpg" alt="Agomoni 2025 performer" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/08.jpg" alt="Agomoni 2025 performer in traditional attire" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/09.jpg" alt="Agomoni 2025 dance moment" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/10.jpg" alt="Agomoni 2025 group photo" loading="lazy"></div>
+      </div>
+      <div class="marquee slow">
+        <div class="memory"><img src="agomoni-2025/03.jpg" alt="Agomoni 2025 musicians" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/05.jpg" alt="Agomoni 2025 dancer" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/10.jpg" alt="Agomoni 2025 group photo" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/01.jpg" alt="Agomoni 2025 celebration" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/08.jpg" alt="Agomoni 2025 performer" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/03.jpg" alt="Agomoni 2025 musicians" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/05.jpg" alt="Agomoni 2025 dancer" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/10.jpg" alt="Agomoni 2025 group photo" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/01.jpg" alt="Agomoni 2025 celebration" loading="lazy"></div>
+        <div class="memory"><img src="agomoni-2025/08.jpg" alt="Agomoni 2025 performer" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="glimpse-note">Hover to pause on desktop · tap any photo to view it larger</div>
+    <a class="drive-link" href="https://drive.google.com/drive/folders/1Qc-hM6Et-Y02iIJ3gHk---eui7FM7_mE" target="_blank" rel="noopener">📁 Open the Agomoni 2025 Drive folder</a>
+  </section>
+
+  <footer>🔊 Every track plays right here — six days, one Goddess, endless adda.</footer>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button id="lightboxClose" aria-label="Close photo">×</button>
+  <img id="lightboxImg" src="" alt="Expanded Agomoni 2025 photo">
+</div>
+
+<script>
+const target = new Date("2026-10-10T04:00:00+05:30").getTime();
+function tick(){
+  let d=Math.max(0,target-Date.now());
+  const days=Math.floor(d/86400000); d%=86400000;
+  const hours=Math.floor(d/3600000); d%=3600000;
+  const mins=Math.floor(d/60000); const secs=Math.floor((d%60000)/1000);
+  for(const [id,v] of [["dd",days],["hh",hours],["mm",mins],["ss",secs]]) document.getElementById(id).textContent=String(v).padStart(2,"0");
+}
+tick(); setInterval(tick,1000);
+
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightboxImg');
+const closeLightbox=()=>{lightbox.classList.remove('open');lightboxImg.src='';document.body.style.overflow='';};
+document.querySelectorAll('.memory img').forEach(img=>img.addEventListener('click',()=>{lightboxImg.src=img.src;lightboxImg.alt=img.alt;lightbox.classList.add('open');document.body.style.overflow='hidden';}));
+document.getElementById('lightboxClose').onclick=closeLightbox;
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+</script>
+</body>
+</html>
